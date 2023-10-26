@@ -14,7 +14,7 @@ function showPlayIcon() {
     playBtn.setAttribute('title', 'Play');
 }
 
-function toggelPlay() {
+function togglePlay() {
     if(video.paused) {
         video.play();
         playBtn.classList.replace('fa-play', 'fa-pause');
@@ -41,8 +41,8 @@ function updateProgress() {
 
 video.addEventListener('ended', showPlayIcon);
 
-playBtn.addEventListener('click', toggelPlay);
-video.addEventListener('click', toggelPlay);
+playBtn.addEventListener('click', togglePlay);
+video.addEventListener('click', togglePlay);
 video.addEventListener('timeupdate', updateProgress);
 video.addEventListener('canplay', updateProgress);
 // Play & Pause ----------------------------------- //
